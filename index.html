@@ -19,7 +19,7 @@
                 <h3 class="card-header">Search for a City</h3>
                 <form id="user-form" class="card-body">
                     <input name="cityname" id="cityname" type="text" autofocus="true" class="form-input col"/>
-                    <button type="submit" class="btn btn-info col">Search</button>
+                    <button type="submit" class="btn searchBtn btn-info col">Search</button>
                 </form>
                 <!-- list of searched cities -->
                 <ul class="list-group">
@@ -29,55 +29,57 @@
             <!-- current weather info -->
             <div class="col-9">
                 <h3 class="card-header text-center">Current Weather Conditions</h3>
-                <h2 class="city-name"></h2>
-                <p class="card-info">Temp: </p>
-                <p class="card-info">Wind: </p>
-                <p class="card-info">Humidity: </p>
-                <p class="card-info">UV Index: </p>
+                <h2 class="city-name" id="date"></h2>
+                <p class="card-info" id="temp">Temp: </p>
+                <p class="card-info" id="wind">Wind: </p>
+                <p class="card-info" id="hum">Humidity: </p>
+                <p class="card-info" id="uv">UV Index: </p>
             <!-- five day forcast cards   -->
             <div class="col-12">
                 <h3 class="card-header text-center">Five Day Forecast</h3>
                 <div class="row">
-                    <div class="col">
-                        <p class="date"></p>
-                        <p class="icon"></p>
-                        <p class="temp">Temp: </p>
-                        <p class="wind">Wind: </p>
-                        <p class="humidity">Humidity: </p>
+                    <div class="col card bg-dark text-light" id="dayOne">
+                        <h2 class="card-title" id="date" ></h2>
+                        <p class="card-info" id="icon"></p>
+                        <p class="card-info" id="temp">Temp: </p>
+                        <p class="card-info" id="wind">Wind: </p>
+                        <p class="card-info" id="hum">Humidity: </p>
                     </div>
-                    <div class="col">
-                        <p class="date"></p>
-                        <p class="icon"></p>
-                        <p class="temp">Temp: </p>
-                        <p class="wind">Wind: </p>
-                        <p class="humidity">Humidity: </p>
+                    <div class="col card bg-dark text-light" id="dayTwo">
+                        <h2 class="card-title" id="date" ></h2>
+                        <p class="card-info" id="icon"></p>
+                        <p class="card-info" id="temp">Temp: </p>
+                        <p class="card-info" id="wind">Wind: </p>
+                        <p class="card-info" id="hum">Humidity: </p>
                     </div>
-                    <div class="col">
-                        <p class="date"></p>
-                        <p class="icon"></p>
-                        <p class="temp">Temp: </p>
-                        <p class="wind">Wind: </p>
-                        <p class="humidity">Humidity: </p>
+                    <div class="col card bg-dark text-light" id="dayThree">
+                        <h2 class="card-title" id="date" ></h2>
+                        <p class="card-info" id="icon"></p>
+                        <p class="card-info" id="temp">Temp: </p>
+                        <p class="card-info" id="wind">Wind: </p>
+                        <p class="card-info" id="hum">Humidity: </p>
                     </div>
-                    <div class="col">
-                        <p class="date"></p>
-                        <p class="icon"></p>
-                        <p class="temp">Temp: </p>
-                        <p class="wind">Wind: </p>
-                        <p class="humidity">Humidity: </p>
+                    <div class="col card bg-dark text-light" id="dayFour">
+                        <h2 class="card-title" id="date" ></h2>
+                        <p class="card-info" id="icon"></p>
+                        <p class="card-info" id="temp">Temp: </p>
+                        <p class="card-info" id="wind">Wind: </p>
+                        <p class="card-info" id="hum">Humidity: </p>
                     </div>
-                    <div class="col">
-                        <p class="date"></p>
-                        <p class="icon"></p>
-                        <p class="temp">Temp: </p>
-                        <p class="wind">Wind: </p>
-                        <p class="humidity">Humidity: </p>
+                    <div class="col card bg-dark text-light" id="dayFive">
+                        <h2 class="card-title" id="date" ></h2>
+                        <p class="card-info" id="icon"></p>
+                        <p class="card-info" id="temp">Temp: </p>
+                        <p class="card-info" id="wind">Wind: </p>
+                        <p class="card-info" id="hum">Humidity: </p>
                     </div>
                 </div>
             </div>    
             </div>
         </div>
     </div>
-    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
