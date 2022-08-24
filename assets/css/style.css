@@ -1,3 +1,11 @@
-.list-group {
-    
+.jumbotron {
+    background-image: radial-gradient(green,blue,indigo,violet); 
+}
+
+.card {
+    background-color: darkblue;
+}
+
+.card-header {
+    background-color: white;
 }
