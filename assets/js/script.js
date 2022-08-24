@@ -22,7 +22,7 @@ for (let i = 0; i < searchedCities.length; i++) {
 //search button onclick function
 $(".searchBtn").on("click", function(event) {
     event.preventDefault()
-    
+    //prevent empty buttons
     if (searchInputEl.value === "") {
         alert("Please enter a city.")
         return;
@@ -39,7 +39,7 @@ $(".searchBtn").on("click", function(event) {
 
         var searched = false
         searchInputEl = document.querySelector("#cityname");
-        //loop through local storage/add buttons for searched cities without duplicates
+        //loop through local storage to prevent duplicate buttons
     for (let i = 0; i < searchedCities.length; i++) {
         
         if (searchInputEl.value == searchedCities[i])
