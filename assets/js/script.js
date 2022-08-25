@@ -1,6 +1,7 @@
 searchBtn = document.querySelector(".searchBtn");
 var searchInputEl = document.querySelector("#cityname");
 var searchedCities =  [];
+var uviSpan = document.getElementById("color-code")
 
 //label buttons with previously searched cities from local storage
 if(JSON.parse(localStorage.getItem("searchedCities"))){
@@ -82,13 +83,42 @@ $(".searchBtn").on("click", function(event) {
     .then((data1) => {
 
         //display uv index
-      $("#uv").text("UV Index: " + data1.value)
-    })  
+      var uvIndexValue = data1.value 
+      
+      var uvIndexValueEl = $("#color-code").text(uvIndexValue).css("background-color", uvColorCode(uvIndexValue));
+      uvIndexEl.append(uvIndexValueEl);
+    
+
+      function uvColorCode(uvIndex) {
+        var uvIndexValue = parseFloat(uvIndex);
+        var colorCode = "";
+        if (uvIndexValue <= 2) {
+          colorcode = "#008000";
+        }
+        else if ((uvIndexValue > 2) && (uvIndexValue <= 5)) {
+          colorCode = "#FFFF00";
+        }
+        else if ((uvIndexValue > 5) && (uvIndexValue <= 7)) {
+          colorCode = "#FFA500";
+        }
+        else if ((uvIndexValue > 7) && (uvIndexValue <= 10)) {
+          colorCode = "#FF4500";
+        }
+        else if (uvIndexValue > 10) {
+          colorCode = "#FF0000";
+        }
+        return colorCode;
+      }
+      
+      
+    })
+  
 
     //forecast fetch
     fetch("https://api.openweathermap.org/data/2.5/forecast?lat=" + data.coord.lat + "&lon=" + data.coord.lon + "&appid=" + apiKey + "&units=imperial")
     .then((response2) => response2.json())
     .then((data2) => {
+      console.log(data2)
     
         //display forecast weather conditions for five consecutive days
       $("#icon1").attr("src", "https://openweathermap.org/img/wn/" + data2.list[6].weather[0].icon + "@2x.png" )  
