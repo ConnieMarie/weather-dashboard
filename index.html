@@ -12,13 +12,13 @@
 <body>
     <!-- page header -->
     <header class="jumbotron bg-secondary text-uppercase text-center text-light">
-        <h1 class="text-strong">Wheather Dashboard</h1>
+        <h1 class="text-strong">Weather Dashboard</h1>
     </header>
     <div class="container">
         <div class="row">
             <!-- section to search city -->
-            <div class="col-3">
-                <h3 class="card-header">Search for a City</h3>
+            <div class="col col-lg-3">
+                <h3 class="card-header">Search for a City:</h3>
                 <form id="user-form" class="card-body">
                     <input name="cityname" id="cityname" type="text"  onfocus="this.value=''" class="form-input col m-1"/>
                     <button type="submit" class="btn btn-info btn-block searchBtn col m-1">Search</button>
@@ -29,9 +29,9 @@
                 </ul>
             </div>
             <!-- current weather info -->
-            <div class="col-9">
+            <div class="col-12 col-lg-9">
                 <h3 class="card-header text-center">Current Weather Conditions</h3>
-                <h2 class="city-name icon0" id="date0"></h2>
+                <h2 class="city-name icon0 text-center text-md-left" id="date0"></h2>
                 <img src="" id="icon0">
                 <p class="card-info" id="temp0">Temp: </p>
                 <p class="card-info" id="wind0">Wind: </p>
@@ -41,36 +41,36 @@
             <div class="col-12">
                 <h3 class="card-header text-center">Five Day Forecast</h3>
                 <div class="row">
-                    <div class="col card m-1 text-light" id="dayOne">
-                        <h4 class="card-title" id="date1" ></h4>
+                    <div class="col-12 col-md card m-2 text-center text-light" id="dayOne">
+                        <h5 class="card-title" id="date1" ></h5>
                         <img src="" class="card-info" id="icon1"></img>
                         <p class="card-info" id="temp1">Temp: </p>
                         <p class="card-info" id="wind1">Wind: </p>
                         <p class="card-info" id="hum1">Humidity: </p>
                     </div>
-                    <div class="col card m-1 text-light" id="dayTwo">
-                        <h4 class="card-title" id="date2" ></h4>
+                    <div class="col-12 col-md card m-2 text-center text-light" id="dayTwo">
+                        <h5 class="card-title" id="date2" ></h5>
                         <img src="" class="card-info" id="icon2">
                         <p class="card-info" id="temp2">Temp: </p>
                         <p class="card-info" id="wind2">Wind: </p>
                         <p class="card-info" id="hum2">Humidity: </p>
                     </div>
-                    <div class="col card m-1 text-light" id="dayThree">
-                        <h4 class="card-title" id="date3" ></h4>
+                    <div class="col-12 col-md card m-2 text-center text-light" id="dayThree">
+                        <h5 class="card-title" id="date3" ></h5>
                         <img src="" class="card-info" id="icon3">
                         <p class="card-info" id="temp3">Temp: </p>
                         <p class="card-info" id="wind3">Wind: </p>
                         <p class="card-info" id="hum3">Humidity: </p>
                     </div>
-                    <div class="col card m-1 text-light" id="dayFour">
-                        <h4 class="card-title" id="date4" ></h4>
+                    <div class="col-12 col-md card m-2 text-center text-light" id="dayFour">
+                        <h5 class="card-title" id="date4" ></h5>
                         <img src="" class="card-info" id="icon4">
                         <p class="card-info" id="temp4">Temp: </p>
                         <p class="card-info" id="wind4">Wind: </p>
                         <p class="card-info" id="hum4">Humidity: </p>
                     </div>
-                    <div class="col card m-1 text-light" id="dayFive">
-                        <h4 class="card-title" id="date5" ></h4>
+                    <div class="col-12 col-md card m-2 text-center text-light" id="dayFive">
+                        <h5 class="card-title" id="date5" ></h5>
                         <img src="" class="card-info" id="icon5">
                         <p class="card-info" id="temp5">Temp: </p>
                         <p class="card-info" id="wind5">Wind: </p>
