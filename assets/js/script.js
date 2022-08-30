@@ -47,12 +47,13 @@ $(".searchBtn").on("click", function (event) {
       searchedCities.push(searchInputEl.value);
       localStorage.setItem("searchedCities", JSON.stringify(searchedCities));
       var btn = document.createElement("button");
-      btn.setAttribute("class", "btn btn-secondary searchBtn m-3");
+      btn.setAttribute("class", "btn searchBtn btn-secondary m-3"); //run searchBtn function when previous searched button is clicked
       btn.innerHTML = searchInputEl.value;
       btn.addEventListener("click", function () {
         searchInputEl.value = btn.innerHTML;
       });
       $(".list-group").append(btn);
+      
     }
   }
 
